@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masnoon Life - নিয়োগ বিজ্ঞপ্তি ইনফোগ্রাফিক</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #f0f8ff;
+        }
+        .brand-text-dark { color: #0a1128; }
+        .brand-text-primary { color: #005f73; }
+        .brand-text-secondary { color: #00a896; }
+        .brand-bg-primary { background-color: #005f73; }
+        .brand-bg-secondary { background-color: #00a896; }
+        .brand-accent { color: #ee9b00; }
+        .brand-bg-accent { background-color: #ee9b00; }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .flowchart-step {
+            position: relative;
+            padding: 1rem;
+            border: 2px solid #005f73;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+        .flowchart-arrow {
+            font-size: 2rem;
+            color: #005f73;
+            line-height: 1;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body class="brand-text-dark">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold brand-text-primary mb-2">Masnoon Life-এ যোগ দিন</h1>
+            <p class="text-xl md:text-2xl text-gray-600">উম্মাহর খিদমতে আত্মনিয়োগের এক সুবর্ণ সুযোগ!</p>
+        </header>
+
+        <main class="space-y-16">
+            
+            <section id="opportunity">
+                <h2 class="text-3xl font-bold text-center mb-8 brand-text-primary">পদের নাম ও বিশেষ সুবিধা</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card text-center">
+                        <h3 class="text-2xl font-bold mb-4">১. সিনিয়র শরঈ রাক্বী</h3>
+                        <p class="text-lg">অভিজ্ঞতা ও দক্ষতার ভিত্তিতে আলোচনা সাপেক্ষে <strong class="brand-accent">আকর্ষণীয় বেতন</strong> নির্ধারণ করা হবে।</p>
+                    </div>
+                    <div class="card text-center">
+                        <h3 class="text-2xl font-bold mb-4">২. শিক্ষানবিশ শরঈ রাক্বী</h3>
+                        <p class="text-lg">বিনামূল্যে কোর্স এবং মাসিক <strong class="brand-accent">৭,০০০ টাকা</strong> শিক্ষানবিশ ভাতা।</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="benefits" class="card md:col-span-2 brand-bg-primary text-white p-8">
+                <h2 class="text-3xl font-bold text-center mb-8">উভয় পদের জন্য বিশেষ সুবিধা</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="p-4 bg-white/20 rounded-lg">
+                        <div class="text-4xl mb-2">🎓</div>
+                        <h4 class="font-bold text-lg">বিনামূল্যে কোর্স</h4>
+                        <p class="text-sm">৪০,০০০ টাকা মূল্যের "Mastering Ruqyah Practice" কোর্স।</p>
+                    </div>
+                    <div class="p-4 bg-white/20 rounded-lg">
+                        <div class="text-4xl mb-2">🏠</div>
+                        <h4 class="font-bold text-lg">আবাসন ব্যবস্থা</h4>
+                        <p class="text-sm">প্রতিষ্ঠানের পক্ষ থেকে মানসম্মত আবাসিক থাকার সুব্যবস্থা।</p>
+                    </div>
+                    <div class="p-4 bg-white/20 rounded-lg">
+                        <div class="text-4xl mb-2">🍲</div>
+                        <h4 class="font-bold text-lg">স্বাস্থ্যকর খাবার</h4>
+                        <p class="text-sm">দৈনিক তিনবেলা স্বাস্থ্যকর খাবারের সুব্যবস্থ।</p>
+                    </div>
+                    <div class="p-4 bg-white/20 rounded-lg">
+                        <div class="text-4xl mb-2">🗓️</div>
+                        <h4 class="font-bold text-lg">সাপ্তাহিক ছুটি</h4>
+                        <p class="text-sm">প্রতি মাসে ৪ দিন সাপ্তাহিক ছুটি (আলোচনা সাপেক্ষে)।</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-8">
+                    <p class="text-lg">নির্বাচিত প্রার্থীদের <strong class="brand-bg-accent text-white px-2 py-1 rounded">সর্বনিম্ন ২ বছরের চুক্তিতে</strong> "Masnoon Life" এর সাথে যুক্ত হতে হবে।</p>
+                </div>
+            </section>
+
+            <section id="qualifications">
+                <h2 class="text-3xl font-bold text-center mb-8 brand-text-primary">আবেদনের আবশ্যিক যোগ্যতা</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card">
+                        <div class="text-3xl brand-accent mb-3">📖</div>
+                        <h4 class="font-semibold text-xl mb-2">কুরআন তিলাওয়াত</h4>
+                        <p>তাজবিদসহ বিশুদ্ধভাবে ও দীর্ঘক্ষণ তিলাওয়াতের যোগ্যতা ও অভ্যাস।</p>
+                    </div>
+                    <div class="card">
+                        <div class="text-3xl brand-accent mb-3">🗣️</div>
+                        <h4 class="font-semibold text-xl mb-2">ভাষাগত দক্ষতা</h4>
+                        <p>প্রমিত ও বিশুদ্ধ বাংলা ভাষায় কথা বলা এবং আঞ্চলিকতামুক্ত উচ্চারণ।</p>
+                    </div>
+                    <div class="card">
+                        <div class="text-3xl brand-accent mb-3">🕌</div>
+                        <h4 class="font-semibold text-xl mb-2">আকিদা ও মানহাজ</h4>
+                        <p>আহলে সুন্নাত ওয়াল জামাতের অনুসারী এবং সহীহ আকিদার অধিকারী।</p>
+                    </div>
+                    <div class="card">
+                        <div class="text-3xl brand-accent mb-3">✨</div>
+                        <h4 class="font-semibold text-xl mb-2">আমল ও আখলাক</h4>
+                        <p>প্র্যাকটিসিং মুসলিম এবং উত্তম আদব-আখলাকের অধিকারী।</p>
+                    </div>
+                     <div class="card">
+                        <div class="text-3xl brand-accent mb-3">💪</div>
+                        <h4 class="font-semibold text-xl mb-2">শারীরিক ও মানসিক সুস্থতা</h4>
+                        <p>রুকইয়াহর জন্য সংবেদনশীল, সুস্থ ও সবল হতে হবে।</p>
+                    </div>
+                    <div class="card">
+                        <div class="text-3xl brand-accent mb-3">❤️</div>
+                        <h4 class="font-semibold text-xl mb-2">খিদমতের মানসিকতা</h4>
+                        <p>গভীর জ্ঞান অর্জনের আগ্রহ এবং উম্মাহর খিদমতের মুখলিস নিয়ত।</p>
+                    </div>
+                </div>
+                <p class="text-center mt-6 text-lg bg-amber-100 border-l-4 border-amber-500 text-amber-700 p-4 rounded-md">
+                    <strong>বিশেষ দ্রষ্টব্য:</strong> সিনিয়র রাক্বী পদের জন্য মাঠপর্যায়ে রুকইয়াহ করার বাস্তব অভিজ্ঞতা সম্পন্ন প্রার্থীদের অগ্রাধিকার দেওয়া হবে।
+                </p>
+            </section>
+            
+            <section id="apprentice-package">
+                <h2 class="text-3xl font-bold text-center mb-8 brand-text-primary">শিক্ষানবিশ প্যাকেজ বিশ্লেষণ</h2>
+                <div class="card">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="text-center md:text-left">
+                            <h3 class="text-2xl font-bold mb-4">একটি অমূল্য বিনিয়োগ</h3>
+                            <p class="text-lg">শিক্ষানবিশ রাক্বী হিসেবে আপনি শুধু মাসিক ভাতাই পাচ্ছেন না, বরং পাচ্ছেন ৪০,০০০ টাকা মূল্যের একটি অ্যাডভান্সড কোর্স যা আপনার দক্ষতাকে বহুগুণে বাড়িয়ে দেবে। এটি আপনার ভবিষ্যতের জন্য একটি সেরা বিনিয়োগ। কোর্স শেষে স্থায়ীভাবে আকর্ষণীয় বেতনে নিয়োগের সুযোগ তো থাকছেই!</p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="apprenticePackageChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="application-draft-generator">
+                <h2 class="text-3xl font-bold text-center mb-8 brand-text-primary">আবেদনপত্রের খসড়া তৈরি করুন ✨</h2>
+                <div class="card p-6">
+                    <p class="text-lg mb-6">আপনার নির্বাচিত পদের জন্য একটি প্রাথমিক আবেদনপত্রের খসড়া তৈরি করতে নিচের তথ্যগুলো পূরণ করুন।</p>
+                    <div class="mb-4">
+                        <label for="roleSelect" class="block text-gray-700 text-lg font-bold mb-2">পদের নাম নির্বাচন করুন:</label>
+                        <select id="roleSelect" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline brand-border-primary">
+                            <option value="শিক্ষানবিশ শরঈ রাক্বী">শিক্ষানবিশ শরঈ রাক্বী</option>
+                            <option value="সিনিয়র শরঈ রাক্বী">সিনিয়র শরঈ রাক্বী</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="educationInput" class="block text-gray-700 text-lg font-bold mb-2">আপনার শিক্ষাগত যোগ্যতা:</label>
+                        <input type="text" id="educationInput" placeholder="যেমন: দাওরায়ে হাদীস, ফাযিল" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline brand-border-primary">
+                    </div>
+                    <div class="mb-4">
+                        <label for="experienceInput" class="block text-gray-700 text-lg font-bold mb-2">আপনার রুকইয়ার অভিজ্ঞতা (যদি থাকে):</label>
+                        <input type="text" id="experienceInput" placeholder="যেমন: ২ বছরের মাঠপর্যায়ের অভিজ্ঞতা" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline brand-border-primary">
+                    </div>
+                    <div class="mb-6">
+                        <label for="mentalityInput" class="block text-gray-700 text-lg font-bold mb-2">খিদমতের মানসিকতা সম্পর্কে এক লাইন:</label>
+                        <input type="text" id="mentalityInput" placeholder="যেমন: উম্মাহর সেবায় নিজেকে উৎসর্গ করতে আগ্রহী" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline brand-border-primary">
+                    </div>
+                    <button id="generateDraftBtn" class="brand-bg-accent hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline transition duration-300 ease-in-out w-full text-xl">
+                        আবেদনপত্রের খসড়া তৈরি করুন ✨
+                    </button>
+                    <div id="loadingIndicator" class="text-center mt-4 hidden">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 brand-border-primary inline-block"></div>
+                        <p class="text-gray-600 mt-2">খসড়া তৈরি হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন...</p>
+                    </div>
+                    <div id="applicationDraftOutput" class="mt-8 p-6 bg-gray-100 rounded-lg border border-gray-200 text-gray-800 leading-relaxed min-h-[100px]">
+                        আপনার আবেদনপত্রের খসড়া এখানে প্রদর্শিত হবে।
+                    </div>
+                </div>
+            </section>
+
+            <section id="process">
+                <h2 class="text-3xl font-bold text-center mb-8 brand-text-primary">আবেদন ও নির্বাচন প্রক্রিয়া</h2>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0">
+                    <div class="flowchart-step w-full md:w-1/5">
+                        <div class="text-2xl brand-accent mb-2">①</div>
+                        <h4 class="font-semibold">আবেদনপত্র তৈরি</h4>
+                        <p class="text-sm">CV ও প্রয়োজনীয় কাগজপত্র প্রস্তুত করুন।</p>
+                    </div>
+                    <div class="flowchart-arrow hidden md:block mx-4">→</div>
+                    <div class="flowchart-arrow md:hidden my-2">↓</div>
+                    <div class="flowchart-step w-full md:w-1/5">
+                        <div class="text-2xl brand-accent mb-2">②</div>
+                        <h4 class="font-semibold">জমাদান</h4>
+                        <p class="text-sm">ইমেইলে বা অফিসে সরাসরি জমা দিন।</p>
+                    </div>
+                     <div class="flowchart-arrow hidden md:block mx-4">→</div>
+                     <div class="flowchart-arrow md:hidden my-2">↓</div>
+                    <div class="flowchart-step w-full md:w-1/5">
+                        <div class="text-2xl brand-accent mb-2">③</div>
+                        <h4 class="font-semibold">যাচাই-বাছাই</h4>
+                        <p class="text-sm">যোগ্য প্রার্থীদের তালিকা করা হবে।</p>
+                    </div>
+                     <div class="flowchart-arrow hidden md:block mx-4">→</div>
+                     <div class="flowchart-arrow md:hidden my-2">↓</div>
+                    <div class="flowchart-step w-full md:w-1/5">
+                        <div class="text-2xl brand-accent mb-2">④</div>
+                        <h4 class="font-semibold">ইন্টারভিউ</h4>
+                        <p class="text-sm">নির্বাচিতদের সাক্ষাৎকারের জন্য ডাকা হবে।</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-8">
+                    <p class="text-lg font-semibold bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded-lg inline-block">
+                        আবেদনের শেষ তারিখ: ৩০ জুন, ২০২৫
+                    </p>
+                </div>
+            </section>
+
+            <footer id="contact" class="brand-bg-secondary text-white p-8 rounded-lg">
+                <h2 class="text-3xl font-bold text-center mb-6">যোগাযোগ করুন</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div>
+                        <h4 class="font-bold text-xl mb-2">📧 ইমেইল</h4>
+                        <a href="mailto:masnoonlife@gmail.com" class="hover:underline">masnoonlife@gmail.com</a>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xl mb-2">📍 অফিসের ঠিকানা</h4>
+                        <p>নূর টাওয়ার, ফ্লোর-৭, ফ্ল্যাট ৮-সি ও ৯-সি, হাউজ-২৯/৩১, রোড-০১, ব্লক-ডি, সেক্টর-২, আফতাবনগর, বাড্ডা, ঢাকা।</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xl mb-2">☎️ ফোন</h4>
+                        <p>+8801605-365301</p>
+                        <p class="text-sm">(সকাল ১০টা - রাত ৮টা)</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('apprenticePackageChart').getContext('2d');
+        const apprenticePackageChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['বিনামূল্যে কোর্স (মূল্য)', 'মাসিক ভাতা'],
+                datasets: [{
+                    label: 'শিক্ষানবিশ প্যাকেজ',
+                    data: [40000, 7000],
+                    backgroundColor: [
+                        '#00a896',
+                        '#ee9b00'
+                    ],
+                    borderColor: [
+                        '#ffffff',
+                        '#ffffff'
+                    ],
+                    borderWidth: 2,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            color: '#0a1128',
+                            font: {
+                                size: 14,
+                                family: "'Hind Siliguri', sans-serif"
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            },
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += new Intl.NumberFormat('bn-BD', { style: 'currency', currency: 'BDT' }).format(context.parsed);
+                                }
+                                return label;
+                            }
+                        },
+                        titleFont: {
+                           family: "'Hind Siliguri', sans-serif"
+                        },
+                        bodyFont: {
+                           family: "'Hind Siliguri', sans-serif"
+                        }
+                    }
+                }
+            }
+        });
+
+        const generateDraftBtn = document.getElementById('generateDraftBtn');
+        const roleSelect = document.getElementById('roleSelect');
+        const educationInput = document.getElementById('educationInput');
+        const experienceInput = document.getElementById('experienceInput');
+        const mentalityInput = document.getElementById('mentalityInput');
+        const applicationDraftOutput = document.getElementById('applicationDraftOutput');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+
+        generateDraftBtn.addEventListener('click', async () => {
+            const role = roleSelect.value;
+            const education = educationInput.value.trim();
+            const experience = experienceInput.value.trim();
+            const mentality = mentalityInput.value.trim();
+
+            if (!education || !mentality) {
+                applicationDraftOutput.textContent = 'অনুগ্রহ করে শিক্ষাগত যোগ্যতা এবং খিদমতের মানসিকতা পূরণ করুন।';
+                applicationDraftOutput.style.color = 'red';
+                return;
+            }
+
+            loadingIndicator.classList.remove('hidden');
+            applicationDraftOutput.textContent = '';
+            applicationDraftOutput.style.color = '#4a5568';
+
+            const prompt = `একটি আবেদনপত্রের প্রথম অনুচ্ছেদ লিখুন। আবেদনকারী 'মাসনুন লাইফ'-এর '${role}' পদের জন্য আবেদন করছেন। তার শিক্ষাগত যোগ্যতা: '${education}'। রুকইয়ার অভিজ্ঞতা: '${experience || "নেই"}'। খিদমতের মানসিকতা: '${mentality}'। আবেদনপত্রটি বাংলা ভাষায়, বিনয়ী ও পেশাদারী ভঙ্গিতে লিখুন, যেখানে তিনি কেন এই পদের জন্য উপযুক্ত এবং উম্মাহর খিদমতে আগ্রহী তা উল্লেখ থাকবে।`;
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    applicationDraftOutput.textContent = text;
+                } else {
+                    applicationDraftOutput.textContent = 'খসড়া তৈরি করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।';
+                    applicationDraftOutput.style.color = 'red';
+                }
+            } catch (error) {
+                console.error('Error generating application draft:', error);
+                applicationDraftOutput.textContent = 'খসড়া তৈরি করার সময় একটি ত্রুটি হয়েছে।';
+                applicationDraftOutput.style.color = 'red';
+            } finally {
+                loadingIndicator.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
