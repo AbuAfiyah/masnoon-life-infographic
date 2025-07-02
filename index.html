@@ -162,6 +162,68 @@
                 </div>
             </section>
 
+            <section id="qualification-matcher">
+                <h2 class="text-3xl font-bold text-center mb-8 brand-text-primary">যোগ্যতা যাচাই ও পরামর্শ ✨</h2>
+                <div class="card p-6">
+                    <p class="text-lg mb-6">আপনার যোগ্যতা সম্পর্কে তথ্য দিন এবং দেখুন আপনি কোন পদের জন্য বেশি উপযুক্ত অথবা কোন ক্ষেত্রে আপনার উন্নতি প্রয়োজন।</p>
+                    <div class="mb-4">
+                        <label for="quranInput" class="block text-gray-700 text-lg font-bold mb-2">কুরআন তিলাওয়াত (যেমন: তাজবীদসহ বিশুদ্ধ, গড়পড়তা, দুর্বল):</label>
+                        <input type="text" id="quranInput" placeholder="যেমন: তাজবীদসহ বিশুদ্ধ" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline brand-border-primary">
+                    </div>
+                    <div class="mb-4">
+                        <label for="languageInput" class="block text-gray-700 text-lg font-bold mb-2">ভাষাগত দক্ষতা (যেমন: প্রমিত বাংলা, আঞ্চলিকতাযুক্ত):</label>
+                        <input type="text" id="languageInput" placeholder="যেমন: প্রমিত বাংলা" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline brand-border-primary">
+                    </div>
+                    <div class="mb-4">
+                        <label for="aqidahInput" class="block text-gray-700 text-lg font-bold mb-2">আকিদা ও মানহাজ (যেমন: সহীহ আকিদার অনুসারী, সাধারণ):</label>
+                        <input type="text" id="aqidahInput" placeholder="যেমন: সহীহ আকিদার অনুসারী" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline brand-border-primary">
+                    </div>
+                    <div class="mb-4">
+                        <label for="akhlaqInput" class="block text-gray-700 text-lg font-bold mb-2">আমল ও আখলাক (যেমন: প্র্যাকটিসিং মুসলিম ও উত্তম আখলাক, গড়পড়তা):</label>
+                        <input type="text" id="akhlaqInput" placeholder="যেমন: প্র্যাকটিসিং মুসলিম ও উত্তম আখলাক" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline brand-border-primary">
+                    </div>
+                    <div class="mb-4">
+                        <label for="healthInput" class="block text-gray-700 text-lg font-bold mb-2">শারীরিক ও মানসিক সুস্থতা (যেমন: সুস্থ ও সবল, কিছু সমস্যা আছে):</label>
+                        <input type="text" id="healthInput" placeholder="যেমন: সুস্থ ও সবল" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline brand-border-primary">
+                    </div>
+                    <div class="mb-4">
+                        <label for="interestInput" class="block text-gray-700 text-lg font-bold mb-2">শেখার আগ্রহ ও খিদমতের মানসিকতা (যেমন: তীব্র আগ্রহ, সাধারণ আগ্রহ):</label>
+                        <input type="text" id="interestInput" placeholder="যেমন: তীব্র আগ্রহ" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline brand-border-primary">
+                    </div>
+                    <div class="mb-6">
+                        <label for="ruqyahExperienceInput" class="block text-gray-700 text-lg font-bold mb-2">রুকইয়ার বাস্তব অভিজ্ঞতা (যদি থাকে):</label>
+                        <input type="text" id="ruqyahExperienceInput" placeholder="যেমন: ২ বছরের মাঠপর্যায়ের অভিজ্ঞতা, নেই" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline brand-border-primary">
+                    </div>
+                    <button id="matchQualificationBtn" class="brand-bg-accent hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline transition duration-300 ease-in-out w-full text-xl">
+                        যোগ্যতা যাচাই করুন ✨
+                    </button>
+                    <div id="qualificationLoadingIndicator" class="text-center mt-4 hidden">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 brand-border-primary inline-block"></div>
+                        <p class="text-gray-600 mt-2">যাচাই করা হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন...</p>
+                    </div>
+                    <div id="qualificationOutput" class="mt-8 p-6 bg-gray-100 rounded-lg border border-gray-200 text-gray-800 leading-relaxed min-h-[100px]">
+                        আপনার যোগ্যতার ফলাফল এখানে প্রদর্শিত হবে।
+                    </div>
+                </div>
+            </section>
+
+            <section id="ruqyah-tip-generator">
+                <h2 class="text-3xl font-bold text-center mb-8 brand-text-primary">রুকইয়াহ টিপস ✨</h2>
+                <div class="card p-6 text-center">
+                    <p class="text-lg mb-6">রুকইয়াহ শারইয়াহ অনুশীলনের জন্য একটি কার্যকর টিপস পেতে নিচের বাটনে ক্লিক করুন।</p>
+                    <button id="generateRuqyahTipBtn" class="brand-bg-accent hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline transition duration-300 ease-in-out w-full text-xl">
+                        টিপস তৈরি করুন ✨
+                    </button>
+                    <div id="tipLoadingIndicator" class="text-center mt-4 hidden">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 brand-border-primary inline-block"></div>
+                        <p class="text-gray-600 mt-2">টিপস তৈরি হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন...</p>
+                    </div>
+                    <div id="ruqyahTipOutput" class="mt-8 p-6 bg-gray-100 rounded-lg border border-gray-200 text-gray-800 leading-relaxed min-h-[100px]">
+                        রুকইয়াহ টিপস এখানে প্রদর্শিত হবে।
+                    </div>
+                </div>
+            </section>
+
             <section id="application-draft-generator">
                 <h2 class="text-3xl font-bold text-center mb-8 brand-text-primary">আবেদনপত্রের খসড়া তৈরি করুন ✨</h2>
                 <div class="card p-6">
@@ -324,6 +386,7 @@
             }
         });
 
+        // Application Draft Generator Logic
         const generateDraftBtn = document.getElementById('generateDraftBtn');
         const roleSelect = document.getElementById('roleSelect');
         const educationInput = document.getElementById('educationInput');
@@ -363,6 +426,7 @@
                     body: JSON.stringify(payload)
                 });
                 const result = await response.json();
+                // console.log('Application Draft API Response:', result); // Debugging log
 
                 if (result.candidates && result.candidates.length > 0 &&
                     result.candidates[0].content && result.candidates[0].content.parts &&
@@ -379,6 +443,126 @@
                 applicationDraftOutput.style.color = 'red';
             } finally {
                 loadingIndicator.classList.add('hidden');
+            }
+        });
+
+        // Qualification Matcher Logic
+        const matchQualificationBtn = document.getElementById('matchQualificationBtn');
+        const quranInput = document.getElementById('quranInput');
+        const languageInput = document.getElementById('languageInput');
+        const aqidahInput = document.getElementById('aqidahInput');
+        const akhlaqInput = document.getElementById('akhlaqInput');
+        const healthInput = document.getElementById('healthInput');
+        const interestInput = document.getElementById('interestInput');
+        const ruqyahExperienceInput = document.getElementById('ruqyahExperienceInput');
+        const qualificationOutput = document.getElementById('qualificationOutput');
+        const qualificationLoadingIndicator = document.getElementById('qualificationLoadingIndicator');
+
+        matchQualificationBtn.addEventListener('click', async () => {
+            const quran = quranInput.value.trim();
+            const language = languageInput.value.trim();
+            const aqidah = aqidahInput.value.trim();
+            const akhlaq = akhlaqInput.value.trim();
+            const health = healthInput.value.trim();
+            const interest = interestInput.value.trim();
+            const ruqyahExperience = ruqyahExperienceInput.value.trim();
+
+            if (!quran || !language || !aqidah || !akhlaq || !health || !interest) {
+                qualificationOutput.textContent = 'অনুগ্রহ করে সকল যোগ্যতার ক্ষেত্র পূরণ করুন।';
+                qualificationOutput.style.color = 'red';
+                return;
+            }
+
+            qualificationLoadingIndicator.classList.remove('hidden');
+            qualificationOutput.textContent = '';
+            qualificationOutput.style.color = '#4a5568';
+
+            const prompt = `মাসনুন লাইফ"-এর নিয়োগ বিজ্ঞপ্তির উপর ভিত্তি করে, একজন প্রার্থীর যোগ্যতা মূল্যায়ন করুন। প্রার্থীর তথ্য নিচে দেওয়া হলো:
+- কুরআন তিলাওয়াত: ${quran}
+- ভাষাগত দক্ষতা: ${language}
+- আকিদা ও মানহাজ: ${aqidah}
+- আমল ও আখলাক: ${akhlaq}
+- শারীরিক ও মানসিক সুস্থতা: ${health}
+- শেখার আগ্রহ ও খিদমতের মানসিকতা: ${interest}
+- রুকইয়ার অভিজ্ঞতা: ${ruqyahExperience || "নেই"}
+
+প্রদত্ত তথ্যের ভিত্তিতে, প্রার্থী "সিনিয়র শরঈ রাক্বী" নাকি "শিক্ষানবিশ শরঈ রাক্বী" পদের জন্য বেশি উপযুক্ত, তা উল্লেখ করুন। যদি কোনো পদে পুরোপুরি উপযুক্ত না হন, তাহলে কোন ক্ষেত্রে উন্নতি প্রয়োজন তার পরামর্শ দিন। উত্তরটি বাংলা ভাষায় দিন এবং নিয়োগ বিজ্ঞপ্তির শর্তাবলী উল্লেখ করুন।`;
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                // console.log('Qualification Matcher API Response:', result); // Debugging log
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    qualificationOutput.textContent = text;
+                } else {
+                    qualificationOutput.textContent = 'যাচাই করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।';
+                    qualificationOutput.style.color = 'red';
+                }
+            } catch (error) {
+                console.error('Error generating qualification match:', error);
+                qualificationOutput.textContent = 'যোগ্যতা যাচাই করার সময় একটি ত্রুটি হয়েছে।';
+                qualificationOutput.style.color = 'red';
+            } finally {
+                qualificationLoadingIndicator.classList.add('hidden');
+            }
+        });
+
+        // Ruqyah Tip Generator Logic
+        const generateRuqyahTipBtn = document.getElementById('generateRuqyahTipBtn');
+        const ruqyahTipOutput = document.getElementById('ruqyahTipOutput');
+        const tipLoadingIndicator = document.getElementById('tipLoadingIndicator');
+
+        generateRuqyahTipBtn.addEventListener('click', async () => {
+            tipLoadingIndicator.classList.remove('hidden');
+            ruqyahTipOutput.textContent = '';
+            ruqyahTipOutput.style.color = '#4a5568';
+
+            const prompt = `"মাসনুন লাইফ" এর "Mastering Ruqyah Practice" কোর্সের ধারণার উপর ভিত্তি করে, রুকইয়াহ শারইয়াহ অনুশীলনের জন্য একটি সংক্ষিপ্ত, কার্যকর এবং ইসলামী নির্দেশনা অনুযায়ী একটি টিপস দিন। টিপসটি বাংলা ভাষায় হবে।`;
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                // console.log('Ruqyah Tip API Response:', result); // Debugging log
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    ruqyahTipOutput.textContent = text;
+                } else {
+                    ruqyahTipOutput.textContent = 'টিপস তৈরি করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।';
+                    ruqyahTipOutput.style.color = 'red';
+                }
+            } catch (error) {
+                console.error('Error generating ruqyah tip:', error);
+                ruqyahTipOutput.textContent = 'টিপস তৈরি করার সময় একটি ত্রুটি হয়েছে।';
+                ruqyahTipOutput.style.color = 'red';
+            } finally {
+                tipLoadingIndicator.classList.add('hidden');
             }
         });
     </script>
